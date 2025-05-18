@@ -32,17 +32,17 @@ Aqui, exploramos a comunicação entre **cliente e servidor** usando **dois prot
 > Requisitos:
 > - Python 3.x instalado
 > - Terminal ou Codespaces
+---
+## Clone o repositório
 
-### 1. Clone o repositório
-
-```bash
+bash
 git clone https://github.com/seu-usuario/nome-do-repositorio.git
 cd nome-do-repositorio
 - CD Jogo;
 - Digite no terminal "Python servidor_jogo.py";
 - Em outro terminal digite "Python cliente_jogo.py";
 Prontinho agora é so jogar :)
-
+---
 ## 📽️ Apresentação do Projeto
 
 👉 [**Ver apresentação no Canva**](https://www.canva.com/design/DAGn0N0RMXA/fer563X8W1gl4_BNq_4c_g/view?utm_content=DAGn0N0RMXA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h35a44d03b2)
