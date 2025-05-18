@@ -3,11 +3,11 @@
 Bem-vindo ao repositório do projeto **Jogo de Perguntas**, desenvolvido como parte prática da disciplina de **Sistemas Distribuídos**.  
 Aqui, exploramos a comunicação entre **cliente e servidor** usando **dois protocolos** de transporte diferentes: **TCP** e **UDP**.  
 
-> 🎯 Objetivo: Demonstrar de forma simples e interativa a troca de mensagens entre cliente e servidor usando Python.
+> Objetivo: Demonstrar de forma simples e interativa a troca de mensagens entre cliente e servidor usando Python.
 
 ---
 
-## 🚀 Como funciona o projeto?
+## Como funciona o projeto?
 
 - O **cliente** se conecta ao servidor via **TCP** (conexão confiável).
 - O **servidor** envia perguntas no terminal e aguarda as respostas do cliente.
@@ -17,7 +17,7 @@ Aqui, exploramos a comunicação entre **cliente e servidor** usando **dois prot
 
 ---
 
-## 💡 Tecnologias e conceitos aplicados
+## Tecnologias e conceitos aplicados
 
 | Tecnologia | Explicação |
 |------------|------------|
@@ -27,7 +27,7 @@ Aqui, exploramos a comunicação entre **cliente e servidor** usando **dois prot
 | **UDP (SOCK_DGRAM)** | Usado para envio rápido da correção de cada resposta — sem necessidade de conexão |
 
 ---
-## 🎮 Executando o projeto
+## Executando o projeto
 
 > Requisitos:
 > - Python 3.x instalado
@@ -43,7 +43,7 @@ cd nome-do-repositorio
 - Em outro terminal digite "Python cliente_jogo.py";
 Prontinho agora é so jogar :)
 ---
-## 📽️ Apresentação do Projeto
+## Apresentação do Projeto
 
 👉 [**Ver apresentação no Canva**](https://www.canva.com/design/DAGn0N0RMXA/fer563X8W1gl4_BNq_4c_g/view?utm_content=DAGn0N0RMXA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h35a44d03b2)
 
