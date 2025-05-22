@@ -8,9 +8,9 @@ perguntas = {
 }
 
 
-HOST = 'localhost'
-TCP_PORT = 5000
-UDP_PORT = 5001
+HOST = '10.25.2.171'
+TCP_PORT = 5050
+UDP_PORT = 5051
 
 
 tcp_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
