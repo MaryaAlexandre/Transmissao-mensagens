@@ -14,7 +14,7 @@ UDP_PORT = 5051
 
 
 tcp_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-tcp_socket.bind(('0.0.0.0', TCP_PORT))
+tcp_socket.bind((HOST, TCP_PORT))
 tcp_socket.listen(1)
 print(f"Servidor aguardando conexão TCP em {HOST}:{TCP_PORT}...")
 conn, addr = tcp_socket.accept()
