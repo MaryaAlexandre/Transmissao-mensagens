@@ -1,14 +1,14 @@
 import socket
 
-HOST =  '10.25.2.171'
+HOST =  '0.0.0.0'
 TCP_PORT = 5050
 UDP_PORT = 5051
 
 
 tcp_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-tcp_socket.connect(('10.25.2.171', TCP_PORT))
+tcp_socket.connect(('0.0.0.0', TCP_PORT))
 udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-udp_socket.bind((HOST, UDP_PORT))
+udp_socket.bind(('0.0.0.0', UDP_PORT))
 
 print("Bem-vindo ao jogo de perguntas! 🧠\nResponda com A, B ou C.\n")
 
