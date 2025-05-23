@@ -40,7 +40,7 @@ while True:
     print(f"\nCliente conectado: {addr}")
 
     try:
-        for num in sorted(perguntas):  # garante ordem crescente
+        for num in sorted(perguntas): 
             while True:
                 data = conn.recv(1024).decode().strip()
 
