@@ -2,14 +2,12 @@ import socket
 import tkinter as tk
 from tkinter import messagebox
 
-# ------------------- CONFIGS -------------------
 TCP_PORT = 5050
 UDP_PORT = 5051
 TEMPO_RESPOSTA = 15
 TOTAL_PERGUNTAS = 5
 
 
-# ------------------ VARIÁVEIS GLOBAIS ------------------
 jogador_nome = ""
 pergunta_num = 1
 pontuacao = 0
@@ -19,7 +17,6 @@ timer_id = None
 tempo_restante = TEMPO_RESPOSTA
 
 
-# ------------------ FUNÇÕES ------------------
 def obter_ip_local():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
@@ -45,6 +42,8 @@ def iniciar_jogo():
 
     try:
         host_servidor = entrada_ip.get().strip()
+
+        tcp_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         tcp_socket.connect((host_servidor, TCP_PORT))
 
         udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -184,13 +183,11 @@ def sair():
     root.destroy()
 
 
-# ------------------ INTERFACE ------------------
 root = tk.Tk()
 root.title("Jogo Interativo 🎮")
 root.geometry("600x400")
 root.config(bg="#f0f8ff")
 
-# --------- Tela Inicial ---------
 frame_inicio = tk.Frame(root, bg="#f0f8ff")
 tk.Label(
     frame_inicio,
@@ -218,7 +215,6 @@ tk.Button(
 
 frame_inicio.pack()
 
-# --------- Tela do Jogo ---------
 frame_jogo = tk.Frame(root, bg="#f0f8ff")
 
 saudacao = tk.Label(frame_jogo, text="", font=("Arial", 14, "bold"), bg="#f0f8ff")
@@ -282,7 +278,6 @@ botao_C.grid(row=0, column=2, padx=10)
 feedback = tk.Label(frame_jogo, text="", font=("Arial", 12), bg="#f0f8ff", fg="green")
 feedback.pack(pady=10)
 
-# --------- Tela Final ---------
 frame_final = tk.Frame(root, bg="#f0f8ff")
 
 mensagem_final = tk.Label(frame_final, text="", font=("Arial", 14), bg="#f0f8ff")
@@ -300,5 +295,5 @@ tk.Button(
     frame_final, text="Sair", font=("Arial", 12), bg="#f44336", fg="white", command=sair
 ).pack()
 
-# --------- Iniciar loop principal ---------
 root.mainloop()
+
