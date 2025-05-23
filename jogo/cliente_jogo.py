@@ -3,7 +3,6 @@ import tkinter as tk
 from tkinter import messagebox
 
 # ------------------- CONFIGS -------------------
-HOST = "localhost"
 TCP_PORT = 5050
 UDP_PORT = 5051
 TEMPO_RESPOSTA = 15
@@ -45,8 +44,8 @@ def iniciar_jogo():
     pontuacao = 0
 
     try:
-        tcp_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        tcp_socket.connect((HOST, TCP_PORT))
+        host_servidor = entrada_ip.get().strip()
+        tcp_socket.connect((host_servidor, TCP_PORT))
 
         udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         udp_socket.bind(("", UDP_PORT))
@@ -204,13 +203,9 @@ tk.Label(frame_inicio, text="Digite seu nome para começar:", bg="#f0f8ff").pack
 entrada_nome = tk.Entry(frame_inicio, font=("Arial", 12))
 entrada_nome.pack(pady=5)
 
-tk.Label(
-    frame_inicio,
-    text=f"Seu IP local é: {obter_ip_local()}",
-    font=("Arial", 10),
-    bg="#f0f8ff",
-    fg="#555",
-).pack(pady=5)
+tk.Label(frame_inicio, text="Digite o IP do servidor:", bg="#f0f8ff").pack()
+entrada_ip = tk.Entry(frame_inicio, font=("Arial", 12))
+entrada_ip.pack(pady=5)
 
 tk.Button(
     frame_inicio,
