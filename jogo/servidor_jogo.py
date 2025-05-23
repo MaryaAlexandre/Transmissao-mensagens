@@ -48,7 +48,7 @@ while True:
                     pergunta, resposta_correta, opcoes = perguntas[num]
                     mensagem = pergunta + "\n" + "\n".join(opcoes)
 
-                    # 🖨️ Print no terminal
+                  
                     print(f"[{addr}] Enviando pergunta {num}: {pergunta}")
                     print(f"[{addr}] Resposta correta: {resposta_correta}")
 
