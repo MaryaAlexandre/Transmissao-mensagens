@@ -47,7 +47,8 @@ def iniciar_jogo():
         tcp_socket.connect((host_servidor, TCP_PORT))
 
         udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        udp_socket.bind(("", UDP_PORT))
+        udp_socket.bind(("", 0))  # Porta 0 = escolhe uma porta livre
+
 
         frame_inicio.pack_forget()
         frame_final.pack_forget()
